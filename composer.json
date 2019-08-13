@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/advance_category_listing",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Advanced Category Listing",
+    "authors": [
+    {
+        "name": "Rohit Goel",
+        "email": "rhtgoel7@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

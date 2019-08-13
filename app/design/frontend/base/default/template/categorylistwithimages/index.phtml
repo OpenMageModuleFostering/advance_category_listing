@@ -1,0 +1,50 @@
+<?php 
+	$categories = $this->getCollection();
+	$catconfiguration = $this->catConfiguration();
+?>
+
+<div class="category-description">
+	<?php echo $catconfiguration['description']; ?>
+</div>
+<div class="toolbar">
+	<?php echo $this->getPagerHtml(); ?>
+</div>
+<div class="category-products">
+	<ul class="products-grid products-grid">
+<?php
+foreach($categories as $category)
+{
+	$cat_id = $category->getId();
+	$cat = Mage::getModel('catalog/category')->load($cat_id);
+	$productCount = $cat->getProductCollection()
+        ->addAttributeToSelect('entity_id')
+        ->addAttributeToFilter('status', 1)
+        ->addAttributeToFilter('visibility', 4);		
+	$catlink = $category->getUrl($category);
+	$catname = $category->getName();
+	$catdesc = $category->getDescription();
+	if($cat->getImageUrl()){
+		echo "<li class='item last' style=' width: auto;clear:unset;margin-right:1.5%;'><a href=".$catlink."><p class='category-image'><img  style='width:".$catconfiguration['width'].";height:".$catconfiguration['height']."' src='".$cat->getImageUrl()."' title='".$catname."'></p></a>";
+		echo "<b>" . $catname .  " (" .$productCount->count().")" ."</b>";
+		echo '<br><br><a class="button btn-cart" href="'.$catlink.'" title="View Category" >
+				<span>View Category</span>
+				</a>';
+		echo "</li>";
+	}
+	else{
+		
+		echo "<li class='item last' style=' width: auto;clear:unset;margin-right:1.5%;'><a href=".$catlink."><p class='category-image'><img style='width:".$catconfiguration['width'].";height:".$catconfiguration['height']."' src='".$catconfiguration['image']."' title='".$catname."' ></p></a>";
+		echo "<b>" . $catname . " (" .$productCount->count().")" ."</b>";
+		echo '<br><br><a class="button btn-cart" href="'.$catlink.'" title="View Category" >
+				<span>View Category</span>
+				</a>';
+		echo "</li>";
+	}
+}
+?>
+	</ul>
+</div>
+
+<div class="toolbar">
+	<?php echo $this->getPagerHtml(); ?>
+</div>

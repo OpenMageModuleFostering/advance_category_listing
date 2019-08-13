@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>advance_category_listing</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Advanced Category Listing</summary>
+    <description>Advanced Category Listing</description>
+    <notes>This is the initial version of Advanced Category Listing and it is fully tested on our servers.</notes>
+    <authors><author><name>Rohit Goel</name><user>Rohit</user><email>rhtgoel7@gmail.com</email></author></authors>
+    <date>2016-03-03</date>
+    <time>11:41:14</time>
+    <contents><target name="magelocal"><dir name="Webkracker"><dir name="Categorylistwithimages"><dir name="Block"><file name="Index.php" hash="4eabc6867b6c56f050676325bf3b8ce8"/></dir><dir name="Helper"><file name="Data.php" hash="bc65117b4571238a8955bb7fc7205cc6"/></dir><dir name="controllers"><file name="IndexController.php" hash="5eb18e99e53074e4d5e62c73beaeac7b"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d006f59231d42b742c82bd7adf9c6fbe"/><file name="config.xml" hash="804ed8bf8ae0da9ad56df43b2c6e511b"/><file name="system.xml" hash="01df029d00f7282239ed37850b3d41d7"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webkracker_Categorylistwithimages.xml" hash="db09a026ef5ecb71094f2578a3eb0af8"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="categorylistwithimages.xml" hash="9fd6cd01e9376836dddd90aec49852ac"/></dir><dir name="template"><dir name="categorylistwithimages"><file name="index.phtml" hash="57dea2204feb97379f8b8d5617cbb39f"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

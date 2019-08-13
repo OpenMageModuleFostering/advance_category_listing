@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<webkracker translate="label" module="categorylistwithimages">
+            <label>Webkracker</label>
+            <sort_order>0</sort_order>
+        </webkracker>
+	  </tabs>
+	  <sections>
+		<categorywithimages  translate="label" module="categorylistwithimages">                    
+		<label>Category List with  images</label>
+		<tab>webkracker</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <general translate="label"> 
+					  <label>general settings</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+					   <description translate="label">
+                            <label>Description</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Enter Description</comment>
+                          </description>
+                          <imagewidth translate="label">
+                            <label>Image Width</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Enter custom image width</comment>
+                          </imagewidth>
+                          <imageheight translate="label">
+                            <label>Image Height</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Enter custom image Height</comment>
+                          </imageheight>
+                          <altimage translate="label">
+                            <label>Alternative image</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/watermark</upload_dir>
+                            <base_url type="media" scope_info="1">catalog/product/watermark</base_url>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Image which will show when category has no image assigned</comment>
+                          </altimage>
+					   </fields>
+					   </general>
+					</groups>
+		</categorywithimages>
+	  </sections>
+</config>

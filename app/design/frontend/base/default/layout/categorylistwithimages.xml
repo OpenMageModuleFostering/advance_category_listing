@@ -1,0 +1,28 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+
+ <default> <!-- Mage_Customer --> 
+ <reference name="top.links">
+	<action method="addLink" translate="label title" module="categorylistwithimages">
+		<label>All Categories</label>
+		<url helper="categorylistwithimages/categoryurl"/>
+		<title>All Categories</title>
+		<prepare/>
+		<urlParams/>
+		<position>10</position>
+	</action>
+ </reference>
+ </default> 
+
+  <categorylistwithimages_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="categorylistwithimages/index" name="categorylistwithimages_index" template="categorylistwithimages/index.phtml"/>   
+    </reference>   
+  </categorylistwithimages_index_index>  
+  
+ 
+</layout>   
+	
