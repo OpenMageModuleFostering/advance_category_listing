@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/advance_category_listing",
+    "name": "openmage-module-fostering\/advance_category_listing",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Advanced Category Listing",
     "authors": [
